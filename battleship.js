@@ -1,3 +1,4 @@
+//The view object
 var view = {
   // this method takes a string message and displays it
   // in the message display area
@@ -22,6 +23,26 @@ var view = {
     cell.setAttribute("class", "miss");
   }
 };
+
+// The model that holds the logic relating to the game
+var model = {
+  // Size of the grid used for the board
+  boardSize: 7,
+  // Number of ships in the game
+  numShips: 3,
+  // Number of location in each ship
+  shipLength: 3,
+  // Keeps the current number of ships that have been sunk by the player
+  shipsSunk: 0,
+
+  // All ships are in an array holds which each holds the location
+  // on the board holds and whether or not a ship is hit at each location
+  ships: [{ locations: ["10", "20", "30"], hits: ["", "", ""] },
+          { locations: ["32", "33", "34"], hits: ["", "", ""] },
+          { locations: ["63", "64", "65"], hits: ["", "", ""] }]
+};
+
+
 
 // Testing the view object
 view.displayMiss("00");
