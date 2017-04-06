@@ -8,7 +8,7 @@
         body {
             background-color: black;
         }
-
+        /*The board set height and width*/
         div#board {
             position: relative;
             width: 1024px;
@@ -16,11 +16,46 @@
             margin: auto;
             background: url("board.jpg") no-repeat;
         }
+        /*Positioning the messageArea to the top left of the board*/
         div#messageArea {
           position: relative;
           top: 0px;
           left: 0px;
           color: rgb(83, 175, 19);
+        }
+        /*Table positioning*/
+        table {
+          position: relative;
+          left: 173px;
+          top: 98px;
+          border-spacing: 0px;
+        }
+        /*Height and width of the cell grid*/
+        td {
+          width: 94px;
+          height: 94px;
+        }
+        /*Form placement*/
+        form {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          padding: 15px;
+          background-color: rgb(83, 175, 19);
+        }
+        /*Styling for the input elements*/
+        form input {
+          background-color: rgb(152, 207, 113);
+          border-color: rgb(83, 175, 19);
+          font-size: 1em;
+        }
+        /*When a ship is hit it will change to this image*/
+        .hit {
+          background: url("ship.png") no-repeat center center;
+        }
+        /*When a ship is missed it will change to this image*/
+        .miss {
+          background: url("miss.png") no-repeat center center;
         }
     </style>
 </head>
@@ -96,7 +131,7 @@
                 <td id="66"></td>
             </tr>
         </table>
-        <!-- Input/ button for their guess in for the battleship game -->
+        <!-- Input and button for their guess in for the battleship game -->
         <form>
           <input type="text" id="guessInput" placeholder="A0">
           <input type="button" id="fireButton" value="Fire!">
